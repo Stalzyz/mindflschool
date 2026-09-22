@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #1F291E;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* ---------------- SUN ANIMATION & HERO CHIPS ---------------- */
+@keyframes sunRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.sun-wrap #sun-rays line {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), stroke 0.4s ease, opacity 0.4s ease;
+  transform-origin: center;
+}
+.sun-wrap:hover #sun-rays line {
+  stroke-width: 6.5px;
+  stroke: #e0a83e;
+  opacity: 1;
+}
+
+/* Hero Chips */
+.hero-chip-container {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.hero-chip {
+  position: absolute;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1F291E;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: auto;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.hero-chip:hover {
+  transform: translateY(-4px) scale(1.06) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.chip-1 { top: 15%; left: 4%; animation: floatChip 6s ease-in-out infinite alternate; }
+.chip-2 { top: 22%; right: 5%; animation: floatChip 8s ease-in-out infinite alternate-reverse; }
+.chip-3 { bottom: 20%; left: 6%; animation: floatChip 7s ease-in-out infinite alternate; }
+.chip-4 { bottom: 25%; right: 7%; animation: floatChip 9s ease-in-out infinite alternate-reverse; }
+
+@keyframes floatChip {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-14px); }
+}
+
+@media (max-width: 768px) {
+  .hero-chip { display: none; }
+}
+
+/* Floating Botanical Leaves */
+.hero-float-leaf {
+  will-change: transform;
+  pointer-events: none;
+}
+.leaf-l1 { animation: floatLeaf1 7s ease-in-out infinite; }
+.leaf-l2 { animation: floatLeaf2 9s ease-in-out infinite; }
+.leaf-l3 { animation: floatLeaf3 11s ease-in-out infinite; }
+.leaf-l4 { animation: floatLeaf4 8s ease-in-out infinite; }
+
+@keyframes floatLeaf1 { 0%,100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-18px) rotate(6deg); } }
+@keyframes floatLeaf2 { 0%,100% { transform: translateY(0) rotate(12deg); } 50% { transform: translateY(-14px) rotate(-4deg); } }
+@keyframes floatLeaf3 { 0%,100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-22px) rotate(10deg); } }
+@keyframes floatLeaf4 { 0%,100% { transform: translateY(0) rotate(8deg); } 50% { transform: translateY(-16px) rotate(-6deg); } }
+
+/* Vine Divider Stroke Line Animation */
+.vine-divider {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 45px;
+  display: block;
+}
+
+.vine-path {
+  fill: none;
+  stroke: #7a9660;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 0;
+  animation: drawVine 3s ease-in-out infinite alternate;
+}
+
+@keyframes drawVine {
+  0% { stroke-dashoffset: 300; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Organic Morphing Boho Blobs */
+.boho-organic-blob {
+  position: absolute;
+  inset: -10px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: linear-gradient(135deg, rgba(124, 148, 99, 0.12) 0%, rgba(184, 85, 45, 0.10) 50%, rgba(224, 168, 62, 0.12) 100%);
+  z-index: -1;
+  pointer-events: none;
+  animation: organicBlobMorph 14s ease-in-out infinite alternate;
+  filter: blur(10px);
+}
+
+@keyframes organicBlobMorph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: rotate(180deg) scale(1.05);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes zoomBackground {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 4s ease-in-out infinite;
+}
+
+.animate-zoom-bg {
+  animation: zoomBackground 10s ease-out infinite alternate;
+}
+
+/* Section Card Animation Class */
+.section-card-anim {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.section-card-anim:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(44, 74, 46, 0.12);
+}
+
+/* Boho Organic Shapes & Patterns */
+.boho-bg-pattern {
+  background-image: radial-gradient(#7a9660 0.75px, transparent 0.75px), radial-gradient(#7a9660 0.75px, #ffffff 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: 0.08;
+}
+
+.boho-blob-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.boho-blob-2 {
+  border-radius: 40% 60% 70% 30% / 40% 50% 50% 60%;
+}
+
+.boho-arch {
+  border-radius: 120px 120px 0 0;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfd9c3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7a9660;
+}
