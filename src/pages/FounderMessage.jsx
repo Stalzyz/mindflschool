@@ -41,22 +41,22 @@ export default function FounderMessage() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
         
         {/* Founder Photograph Display */}
-        <div className="md:col-span-4 space-y-4 text-center sticky top-28">
+        <div className="md:col-span-4 space-y-4 text-center md:sticky md:top-28 mb-8 md:mb-0 relative z-10">
           <div className="relative inline-block">
             {/* Organic Arch Frame */}
-            <div className="w-64 sm:w-72 h-80 sm:h-96 rounded-t-[120px] rounded-b-3xl overflow-hidden border-4 border-white shadow-xl bg-[#EAE4D7] mx-auto">
+            <div className="w-56 sm:w-64 md:w-full max-w-[260px] h-72 sm:h-80 rounded-t-[120px] rounded-b-3xl overflow-hidden border-4 border-white shadow-xl bg-[#EAE4D7] mx-auto">
               <img
                 src="/images/founder.png"
                 alt="Vaikunth Sivashenthan Govindarajan Founder"
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-[#7a9660] text-white rounded-full flex items-center justify-center shadow-lg">
-              <LeafIcon className="w-6 h-6" />
+            <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-[#7a9660] text-white rounded-full flex items-center justify-center shadow-lg">
+              <LeafIcon className="w-5 h-5" />
             </div>
           </div>
 
-          <div className="space-y-1">
+          <div className="space-y-1 pt-1">
             <h3 className="font-serif text-xl font-bold text-[#1F291E]">
               Vaikunth Sivashenthan Govindarajan
             </h3>

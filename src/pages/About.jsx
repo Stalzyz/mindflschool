@@ -96,15 +96,15 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
             
             {/* Founder Photograph Space */}
-            <div className="md:col-span-4 space-y-3 text-center sticky top-28">
-              <div className="w-60 sm:w-64 h-72 sm:h-80 rounded-t-[100px] rounded-b-3xl overflow-hidden border-4 border-white shadow-xl bg-[#EAE4D7] mx-auto">
+            <div className="md:col-span-4 space-y-4 text-center md:sticky md:top-28 mb-8 md:mb-0 relative z-10">
+              <div className="w-56 sm:w-64 md:w-full max-w-[260px] h-72 sm:h-80 rounded-t-[100px] rounded-b-3xl overflow-hidden border-4 border-white shadow-xl bg-[#EAE4D7] mx-auto">
                 <img
                   src="/images/founder.png"
                   alt="Vaikunth Sivashenthan Govindarajan Founder"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div>
+              <div className="pt-1">
                 <h3 className="font-serif text-lg font-bold text-[#1F291E]">
                   Vaikunth Sivashenthan Govindarajan
                 </h3>
