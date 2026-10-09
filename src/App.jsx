@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import WhyMindfl from './pages/WhyMindfl';
 import Programs from './pages/Programs';
+import Architecture from './pages/Architecture';
 import Contact from './pages/Contact';
 
 // Scroll to top or specific element on route change
@@ -41,14 +42,14 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/why-mindfl" element={<WhyMindfl />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/architecture" element={<Architecture />} />
             <Route path="/contact" element={<Contact />} />
 
-            {/* Seamless Aliases / Redirects to corresponding sections inside the 5 major pages */}
+            {/* Seamless Aliases / Redirects to corresponding sections inside the major pages */}
             <Route path="/founders-message" element={<Navigate to="/about#founders-message" replace />} />
             <Route path="/team" element={<Navigate to="/about#our-team" replace />} />
             <Route path="/thinkers" element={<Navigate to="/why-mindfl#thinkers-behind-mindfl" replace />} />
             <Route path="/watch-and-learn" element={<Navigate to="/why-mindfl#watch-and-learn" replace />} />
-            <Route path="/architecture" element={<Navigate to="/programs#architecture" replace />} />
             <Route path="/admissions" element={<Navigate to="/contact" replace />} />
             <Route path="/community" element={<Navigate to="/contact#community" replace />} />
             

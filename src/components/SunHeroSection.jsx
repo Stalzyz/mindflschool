@@ -99,42 +99,7 @@ export default function SunHeroSection() {
       {/* Primary Hero Content Container */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-30">
         
-        {/* Animated Sun Hero Component */}
-        <div 
-          className="sun-wrap relative w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto mb-2 transition-transform duration-200 ease-out cursor-pointer"
-          style={{ transform: `translate3d(${mousePos.x * 16}px, ${mousePos.y * 16}px, 0)` }}
-        >
-          <svg 
-            id="sun-rays" 
-            className="w-full h-full drop-shadow-lg" 
-            viewBox="0 0 300 300" 
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ animation: 'sunRotate 12s linear infinite', transformOrigin: 'center' }}
-          >
-            <g stroke="#e0a83e" strokeLinecap="round" strokeWidth="4.5" opacity="0.9">
-              <line x1="150" y1="40" x2="150" y2="70"/>
-              <line x1="150" y1="230" x2="150" y2="260"/>
-              <line x1="40" y1="150" x2="70" y2="150"/>
-              <line x1="230" y1="150" x2="260" y2="150"/>
-              <line x1="72" y1="72" x2="93" y2="93"/>
-              <line x1="207" y1="207" x2="228" y2="228"/>
-              <line x1="72" y1="228" x2="93" y2="207"/>
-              <line x1="207" y1="93" x2="228" y2="72"/>
-              <line x1="105" y1="50" x2="115" y2="76"/>
-              <line x1="195" y1="250" x2="185" y2="224"/>
-              <line x1="50" y1="105" x2="76" y2="115"/>
-              <line x1="250" y1="195" x2="224" y2="185"/>
-              <line x1="105" y1="250" x2="115" y2="224"/>
-              <line x1="195" y1="50" x2="185" y2="76"/>
-              <line x1="50" y1="195" x2="76" y2="185"/>
-              <line x1="250" y1="105" x2="224" y2="115"/>
-            </g>
-            <circle cx="150" cy="150" r="76" fill="#f0c874" stroke="#e0a83e" strokeWidth="3"/>
-            <circle cx="130" cy="142" r="4.5" fill="#2b2416" opacity="0.85"/>
-            <circle cx="170" cy="142" r="4.5" fill="#2b2416" opacity="0.85"/>
-            <path d="M126,164 Q150,182 174,164" stroke="#2b2416" strokeWidth="3.5" fill="none" strokeLinecap="round" opacity="0.85"/>
-          </svg>
-        </div>
+
 
         <div className="space-y-3">
           <span className="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-md text-[#F2EDE2] border border-white/25 rounded-full text-xs font-semibold tracking-widest uppercase shadow-sm">

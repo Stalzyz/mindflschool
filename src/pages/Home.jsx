@@ -88,26 +88,26 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Styled Oval Card */}
-        <div className="bg-gradient-to-b from-[#EBF2E6] to-[#DEE8D7] border-2 border-[#A3BF91] rounded-[50px] sm:rounded-[100px] p-8 sm:p-14 shadow-md max-w-4xl mx-auto space-y-6 section-card-anim">
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F291E]">
-            How We TEACH & How we GROW
+        {/* Styled Oval Card with 10px Stroke */}
+        <div className="bg-[#dce8d6] border-[10px] border-[#86a880] rounded-[60px] sm:rounded-[100px] md:rounded-[130px] px-6 sm:px-14 md:px-16 py-10 sm:py-14 md:py-16 shadow-lg max-w-4xl mx-auto space-y-6 section-card-anim">
+          <h3 className="font-serif text-2xl sm:text-4xl font-bold text-[#1F291E] tracking-tight">
+            How We TEACH &amp; How we GROW
           </h3>
 
-          <p className="text-sm sm:text-base text-[#2E3D2D] leading-relaxed max-w-2xl mx-auto">
-            Learning is a collective act. We see every child as innately curious and capable. Our role is to protect that curiosity. Informed by <strong className="font-semibold text-[#1F291E]">Gesell Developmental Science (Yale Child Study Center, USA)</strong>, we honor each child's unique rhythm by ensuring they are never rushed, but always ready. In our learning village, children don't just learn skills <em className="font-serif text-[#2C4A2E]">they learn how to learn</em>. We ensure they graduate meaningfully engaged with the world around them.
+          <p className="text-sm sm:text-base md:text-[17px] text-[#243323] leading-relaxed max-w-3xl mx-auto font-normal">
+            Learning is a collective act. We see every child as innately curious and capable. Our role is to protect that curiosity. Informed by <strong className="font-bold text-[#1F291E]">Gesell Developmental Science (Yale Child Study Center, USA)</strong>, we honor each child's unique rhythm by ensuring they are never rushed, but always ready. In our learning village, children don't just learn skills <em className="font-serif italic text-[#1F291E]">they learn how to learn</em>. We ensure they graduate meaningfully engaged with the world around them.
           </p>
 
-          <p className="font-serif text-lg font-bold text-[#2C4A2E]">
+          <p className="font-serif text-lg sm:text-xl font-bold text-[#1F291E] pt-2">
             This is how we GROW together.
           </p>
 
-          <div>
+          <div className="pt-2">
             <Link
               to="/why-mindfl"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#2C4A2E] hover:bg-[#1D321F] text-white text-sm font-semibold rounded-full shadow transition transform hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#263e25] hover:bg-[#1a2d19] text-white text-sm sm:text-base font-medium rounded-full shadow-md transition-all transform hover:scale-105"
             >
-              [ See our GROW approach in action ]
+              <span>[ See our GROW approach in action ]</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

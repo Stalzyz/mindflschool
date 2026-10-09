@@ -8,7 +8,7 @@ export default function AdmissionForm() {
     phone: '',
     childName: '',
     program: 'Sprouts (2–3 Years)',
-    pathway: 'Independent Pathway (9:00 am – 12:30 pm)',
+    pathway: 'Independent Pathway (8:30 am – 12:30 pm)',
     message: ''
   });
 
@@ -50,7 +50,7 @@ export default function AdmissionForm() {
                   phone: '',
                   childName: '',
                   program: 'Sprouts (2–3 Years)',
-                  pathway: 'Independent Pathway (9:00 am – 12:30 pm)',
+                  pathway: 'Independent Pathway (8:30 am – 12:30 pm)',
                   message: ''
                 });
               }}
@@ -177,8 +177,8 @@ export default function AdmissionForm() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white border border-[#D5CDBF] rounded-xl focus:ring-2 focus:ring-[#7a9660] focus:border-transparent outline-none text-sm transition"
               >
-                <option value="Independent Pathway (9:00 am – 12:30 pm)">Independent Pathway (9:00 am – 12:30 pm)</option>
-                <option value="Full Day Pathway (9:00 am – 4:30 pm)">Full Day Pathway (9:00 am – 4:30 pm)</option>
+                <option value="Independent Pathway (8:30 am – 12:30 pm)">Independent Pathway (8:30 am – 12:30 pm)</option>
+                <option value="Full Day Pathway (8:30 am – 4:30 pm)">Full Day Pathway (8:30 am – 4:30 pm)</option>
                 <option value="Parent–Toddler 2-Hour Sessions (3 Days/Wk)">Parent–Toddler 2-Hour Sessions (3 Days/Wk)</option>
                 <option value="Sprouts 3-Hour Sessions (5 Days/Wk)">Sprouts 3-Hour Sessions (5 Days/Wk)</option>
               </select>

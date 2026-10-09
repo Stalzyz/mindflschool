@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, MapPin, Mail, Clock, ArrowRight, Heart } from 'lucide-react';
+import { MapPin, Mail, Clock, ArrowRight, Heart } from 'lucide-react';
 import { BohoSunburst, BohoArchShape } from './BohoShapes';
 
 export default function Footer() {
@@ -22,19 +22,13 @@ export default function Footer() {
           
           {/* Column 1: Brand & Philosophy */}
           <div className="md:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#7a9660] flex items-center justify-center text-white shadow-md">
-                <Leaf className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="font-serif text-2xl font-bold tracking-tight text-white block leading-none">
-                  MINDFL
-                </span>
-                <span className="text-[10px] uppercase tracking-widest text-[#A4C28A] font-sans font-semibold block mt-1">
-                  Early Years
-                </span>
-              </div>
-            </div>
+            <Link to="/" className="inline-block">
+              <img
+                src="/mindfl_logo.png"
+                alt="MINDFL Early Years"
+                className="h-12 w-auto object-contain brightness-0 invert opacity-90"
+              />
+            </Link>
 
             <p className="text-[#A8B8A5] text-xs sm:text-sm leading-relaxed font-serif italic max-w-sm">
               "A PROGRESSIVE LEARNING VILLAGE FOR THE EARLY YEARS IN SIVARAM NAGAR, COIMBATORE"
@@ -47,12 +41,12 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#A4C28A] flex-shrink-0" />
-                <span>Expression of Interest & Admission Enquiries</span>
+                <span>Expression of Interest &amp; Admission Enquiries</span>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Quick Links (5 Major Pages) */}
+          {/* Column 2: Quick Links */}
           <div className="md:col-span-3 space-y-3">
             <h4 className="font-sans uppercase text-[#A4C28A] tracking-wider font-semibold text-xs border-b border-[#344733] pb-2">
               Quick Navigation
@@ -65,22 +59,27 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/about" className="hover:text-white transition flex items-center gap-1.5">
-                  <span className="text-[#7a9660]">›</span> About Us & Founder's Message
+                  <span className="text-[#7a9660]">›</span> About Us
                 </Link>
               </li>
               <li>
                 <Link to="/why-mindfl" className="hover:text-white transition flex items-center gap-1.5">
-                  <span className="text-[#7a9660]">›</span> Why MINDFL & Thinkers
+                  <span className="text-[#7a9660]">›</span> Why MINDFL &amp; Pedagogy
                 </Link>
               </li>
               <li>
                 <Link to="/programs" className="hover:text-white transition flex items-center gap-1.5">
-                  <span className="text-[#7a9660]">›</span> Our Programs & Architecture
+                  <span className="text-[#7a9660]">›</span> Our Programs (Stages 1–5)
+                </Link>
+              </li>
+              <li>
+                <Link to="/architecture" className="hover:text-white transition flex items-center gap-1.5">
+                  <span className="text-[#7a9660]">›</span> Campus Architecture
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-white transition flex items-center gap-1.5">
-                  <span className="text-[#7a9660]">›</span> Contact & Admissions Inquiry
+                  <span className="text-[#7a9660]">›</span> Contact &amp; Admissions Inquiry
                 </Link>
               </li>
             </ul>
@@ -90,7 +89,7 @@ export default function Footer() {
           <div className="md:col-span-5 space-y-4 bg-[#263725] p-6 rounded-2xl border border-[#3A4E39]">
             <h4 className="font-serif text-base text-white font-semibold flex items-center gap-2">
               <Clock className="w-4 h-4 text-[#A4C28A]" />
-              Learning Rhythms & Pathways
+              Learning Rhythms &amp; Pathways
             </h4>
 
             <ul className="space-y-2 text-xs text-[#A8B8A5]">
@@ -103,8 +102,8 @@ export default function Footer() {
                 <span className="text-white font-medium">3-Hr / 5 Days/Wk</span>
               </li>
               <li className="flex justify-between border-b border-[#3A4E39] pb-1">
-                <span>Seedlings, Buds & Blossoms</span>
-                <span className="text-white font-medium">Independent / Full Day</span>
+                <span>Seedlings, Buds &amp; Blossoms (Stages 3–5)</span>
+                <span className="text-white font-medium">From 8:30 AM</span>
               </li>
             </ul>
 
