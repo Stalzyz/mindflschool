@@ -56,11 +56,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center group py-2">
             <img 
               src="/mindfl_logo.png" 
               alt="MINDFL Early Years" 
-              className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="w-[200px] sm:w-[250px] max-w-[250px] h-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
